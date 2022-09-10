@@ -1,7 +1,12 @@
 import React from "react";
+import * as S from "./styles";
 
 const Home: React.FC = () => {
-  return <h1>Home</h1>;
+  return (
+    <S.Container>
+      <h1>Home</h1>
+    </S.Container>
+  );
 };
 
 export default Home;

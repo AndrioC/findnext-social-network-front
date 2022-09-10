@@ -1,0 +1,15 @@
+import styled from "styled-components";
+import { Button } from "antd";
+
+export const ButtonStyled = styled(Button)`
+  background: var(--peach-100);
+  border-radius: 10px;
+  width: 413px;
+  height: 52px;
+  font-size: 18px;
+  transition: filter 0.2s linear;
+
+  &:hover {
+    filter: brightness(95%);
+  }
+`;
