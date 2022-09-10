@@ -1,45 +1,48 @@
 import { Space, Typography } from "antd";
 import React from "react";
 import ButtonStyled from "../../components/ButtonStyled";
-import Header from "../../components/Header";
 import InputRoundPassword from "../../components/InputRoundPassword";
 import InputRoundText from "../../components/InputRoundText";
 import * as S from "./styles";
+import logoImg from "../../assets/logo.svg";
 
-const Login: React.FC = () => {
+const SignUp: React.FC = () => {
   return (
     <S.Container>
-      <Header />
+      <S.Header>
+        <img src={logoImg} alt="FindNext" />
+      </S.Header>
       <S.Content>
-        <S.WrapperLogin>
-          <S.WrapperLoginTitle>
-            <Typography.Text strong>Login</Typography.Text>
-            <Typography.Text className="subtitle-login">
-              Hello, enter your credentials to get access to your account
+        <S.WrapperSignUp>
+          <S.WrapperSignUpTitle>
+            <Typography.Text strong>Sign Up</Typography.Text>
+            <Typography.Text className="subtitle-signup">
+              Hi, create your account and start planning your next adventure
             </Typography.Text>
-          </S.WrapperLoginTitle>
+          </S.WrapperSignUpTitle>
           <S.WrapperInputs>
             <Space
-              size={27}
+              size={6}
               style={{ display: "flex", flexDirection: "column" }}
             >
+              <InputRoundText placeholderText="Name" />
               <InputRoundText placeholderText="E-mail" />
               <InputRoundPassword placeholderText="Password" />
+              <InputRoundPassword placeholderText="Confirm password" />
             </Space>
           </S.WrapperInputs>
           <S.WrapperSignInButton>
             <ButtonStyled text="Sign In" />
           </S.WrapperSignInButton>
-          <S.WrapperSignUp>
+          <S.WrapperSignIn>
             <Typography.Text>
-              Don&apos;t have an account?{" "}
-              <a href="www.google.com">Create now</a>{" "}
+              Already have an account? <a href="www.google.com">Sign In</a>{" "}
             </Typography.Text>
-          </S.WrapperSignUp>
-        </S.WrapperLogin>
+          </S.WrapperSignIn>
+        </S.WrapperSignUp>
       </S.Content>
     </S.Container>
   );
 };
 
-export default Login;
+export default SignUp;

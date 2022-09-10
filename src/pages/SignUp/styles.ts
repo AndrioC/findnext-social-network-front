@@ -1,35 +1,43 @@
 import styled from "styled-components";
 
-import leftImage from "../../assets/background-images/undraw_trip_re_f724.svg";
-import leftBottomImage from "../../assets/background-images/undraw_camping_noc8.svg";
-import rightCenterImage from "../../assets/background-images/undraw_world_re_768g.svg";
+import leftImage from "../../assets/background-images/undraw_right_direction_tge8.svg";
+import rightImage from "../../assets/background-images/undraw_connected_world_wuay.svg";
 
 export const Container = styled.div`
   height: 100vh;
-  background: url(${leftImage}), url(${leftBottomImage}),
-    url(${rightCenterImage});
+  background: url(${leftImage}), url(${rightImage});
   background-repeat: no-repeat;
-  background-size: 392px 356px, 300px 356px, 892px 456px;
-  background-position: top 115px left -75px, top 484px left -15px,
-    top 213px right -210px;
+  background-size: 392px 356px, 600px 456px;
+  background-position: top 115px left 25px, top 213px right 20px;
 
   /* Tablet */
   @media (max-width: 993px) and (min-width: 768px) {
     background-color: red;
-    background: url(${leftImage}), url(${leftBottomImage}),
-      url(${rightCenterImage});
+    background: url(${leftImage}), url(${rightImage});
     background-repeat: no-repeat;
-    background-size: 292px 356px, 200px 356px, 692px 456px;
-    background-position: top 115px left -75px, top 484px left -15px,
-      top 213px right -110px;
+    background-size: 292px 356px, 692px 456px;
+    background-position: top 115px left -75px, top 213px right -110px;
   }
 
   /* Mobile */
   @media (max-width: 767px) {
-    background: url(${rightCenterImage});
+    height: 100vh;
+    background: url(${rightImage});
     background-repeat: no-repeat;
     background-size: 292px 356px;
     background-position: top 545px left 50%;
+  }
+`;
+
+export const Header = styled.header`
+  padding: 30px 0 0 25px;
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
   }
 `;
 
@@ -39,7 +47,7 @@ export const Content = styled.div`
   justify-content: center;
 `;
 
-export const WrapperLogin = styled.div`
+export const WrapperSignUp = styled.div`
   display: flex;
   background: var(--white);
   width: 526px;
@@ -51,11 +59,11 @@ export const WrapperLogin = styled.div`
   /* Mobile */
   @media (max-width: 767px) {
     width: 360px;
-    height: 540px;
+    height: 590px;
   }
 `;
 
-export const WrapperLoginTitle = styled.div`
+export const WrapperSignUpTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +74,7 @@ export const WrapperLoginTitle = styled.div`
     font-size: 24px;
   }
 
-  .subtitle-login {
+  .subtitle-signup {
     font-size: 15px;
     line-height: 21px;
     width: 253px;
@@ -96,7 +104,7 @@ export const WrapperSignInButton = styled.div`
   }
 `;
 
-export const WrapperSignUp = styled.div`
+export const WrapperSignIn = styled.div`
   margin-top: 42px;
 
   span {
