@@ -11,10 +11,38 @@ export const Container = styled.div`
   background-size: 392px 356px, 300px 356px, 892px 456px;
   background-position: top 115px left -75px, top 484px left -15px,
     top 213px right -210px;
+
+  /* Tablet */
+  @media (max-width: 993px) and (min-width: 768px) {
+    background-color: red;
+    background: url(${leftImage}), url(${leftBottomImage}),
+      url(${rightCenterImage});
+    background-repeat: no-repeat;
+    background-size: 292px 356px, 200px 356px, 692px 456px;
+    background-position: top 115px left -75px, top 484px left -15px,
+      top 213px right -110px;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    height: 100vh;
+    background: url(${rightCenterImage});
+    background-repeat: no-repeat;
+    background-size: 292px 356px;
+    background-position: top 545px left 50%;
+  }
 `;
 
 export const Header = styled.header`
   padding: 30px 0 0 25px;
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
 `;
 
 export const Content = styled.div`
@@ -31,6 +59,12 @@ export const WrapperLogin = styled.div`
   border-radius: 45px;
   flex-direction: column;
   align-items: center;
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    width: 360px;
+    height: 540px;
+  }
 `;
 
 export const WrapperLoginTitle = styled.div`
@@ -55,8 +89,23 @@ export const WrapperLoginTitle = styled.div`
   }
 `;
 
+export const WrapperInputs = styled.div`
+  width: 413px;
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    width: 320px;
+  }
+`;
+
 export const WrapperSignInButton = styled.div`
   margin-top: 57px;
+  width: 413px;
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    width: 320px;
+  }
 `;
 
 export const WrapperSignUp = styled.div`

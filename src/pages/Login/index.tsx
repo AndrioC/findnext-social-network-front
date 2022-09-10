@@ -20,10 +20,15 @@ const Login: React.FC = () => {
               Hello, enter your credentials to get access to your account
             </Typography.Text>
           </S.WrapperLoginTitle>
-          <Space size={27} style={{ display: "flex", flexDirection: "column" }}>
-            <InputRoundText placeholderText="E-mail" />
-            <InputRoundPassword placeholderText="Password" />
-          </Space>
+          <S.WrapperInputs>
+            <Space
+              size={27}
+              style={{ display: "flex", flexDirection: "column" }}
+            >
+              <InputRoundText placeholderText="E-mail" />
+              <InputRoundPassword placeholderText="Password" />
+            </Space>
+          </S.WrapperInputs>
           <S.WrapperSignInButton>
             <ButtonStyled text="Sign In" />
           </S.WrapperSignInButton>
