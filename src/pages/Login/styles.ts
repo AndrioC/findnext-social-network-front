@@ -5,7 +5,6 @@ import leftBottomImage from "../../assets/background-images/undraw_camping_noc8.
 import rightCenterImage from "../../assets/background-images/undraw_world_re_768g.svg";
 
 export const Container = styled.div`
-  padding: 30px 0 0 25px;
   background: url(${leftImage}), url(${leftBottomImage}),
     url(${rightCenterImage});
   background-repeat: no-repeat;
@@ -14,7 +13,9 @@ export const Container = styled.div`
     top 213px right -210px;
 `;
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  padding: 30px 0 0 25px;
+`;
 
 export const Content = styled.div`
   display: flex;
