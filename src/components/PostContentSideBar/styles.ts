@@ -5,7 +5,7 @@ export const Container = styled.aside`
   align-items: center;
   flex-direction: column;
   width: 340px;
-  height: 540px;
+  height: 570px;
   background: var(--white);
   border-radius: 9px;
   position: fixed;
@@ -22,14 +22,6 @@ export const EditProfileButton = styled.div`
   position: absolute;
   top: 6px;
   right: 6px;
-  cursor: pointer;
-  svg {
-    color: var(--blue-50);
-  }
-
-  &:hover {
-    filter: brightness(75%);
-  }
 `;
 
 export const ProfileInfo = styled.div`
@@ -74,7 +66,7 @@ export const UserImage = styled.div`
 `;
 
 export const BioInfo = styled.div`
-  margin-top: 45px;
+  margin-top: 15px;
 `;
 
 export const ContentBox = styled.div`
@@ -87,14 +79,6 @@ export const ContentBox = styled.div`
 
 export const UploadImage = styled.div`
   margin-top: 6px;
-  margin-bottom: 6px;
-`;
-
-export const Divider = styled.div`
-  width: 100%;
-  background: var(--grey-100);
-  height: 1px;
-  margin-bottom: 12px;
 `;
 
 export const WrapperPostButton = styled.div`

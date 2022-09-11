@@ -86,6 +86,10 @@ export const WrapperSignUpTitle = styled.div`
 `;
 
 export const WrapperInputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 220px;
   width: 413px;
 
   /* Mobile */

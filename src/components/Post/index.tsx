@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiCommentDetail } from "react-icons/bi";
 import { BsBookmark } from "react-icons/bs";
+import { Divider } from "antd";
 import * as S from "./styles";
 
 import userImg from "../../assets/profile.png";
@@ -27,7 +28,7 @@ const Post: React.FC = () => {
         <S.PlaceImage>
           <img src={placeImg} alt="some-park" />
         </S.PlaceImage>
-        <S.Divider />
+        <Divider />
         <S.Bottom>
           <S.CommentSection>
             <S.UserImage>

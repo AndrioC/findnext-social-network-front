@@ -44,7 +44,6 @@ export const UserNameAndLocation = styled.div`
 `;
 
 export const Description = styled.div`
-  margin-top: 24px;
   margin-bottom: 24px;
   align-self: flex-start;
   padding: 0 0 0 24px;
@@ -58,19 +57,11 @@ export const PlaceImage = styled.div`
   }
 `;
 
-export const Divider = styled.div`
-  width: 100%;
-  background: var(--grey-100);
-  height: 1px;
-  margin-top: 10px;
-`;
-
 export const Bottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 551px;
-  margin-top: 15px;
 `;
 
 export const CommentSection = styled.div`

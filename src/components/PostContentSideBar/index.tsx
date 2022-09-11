@@ -1,18 +1,19 @@
 import React from "react";
-import { BiMessageSquareEdit } from "react-icons/bi";
+import { Divider } from "antd";
 import * as S from "./styles";
 
 import userImg from "../../assets/profile.png";
 import ContentBox from "../ContentBox";
 import ButtonStyled from "../ButtonStyled";
 import UploadButton from "../UploadButton";
+import EditProfileButton from "../EditProfileButton";
 
 const PostContentSideBar: React.FC = () => {
   return (
     <S.Container>
       <S.BackgroundImage>
         <S.EditProfileButton>
-          <BiMessageSquareEdit size={21} />
+          <EditProfileButton />
         </S.EditProfileButton>
       </S.BackgroundImage>
       <S.ProfileInfo>
@@ -43,7 +44,7 @@ const PostContentSideBar: React.FC = () => {
       <S.UploadImage>
         <UploadButton />
       </S.UploadImage>
-      <S.Divider />
+      <Divider />
       <S.WrapperPostButton>
         <ButtonStyled text="Post" />
       </S.WrapperPostButton>

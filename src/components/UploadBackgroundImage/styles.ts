@@ -6,9 +6,9 @@ export const ButtonStyled = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  width: 123px;
-  height: 40px;
+  border-radius: 9px;
+  width: 379px;
+  height: 225px;
   font-size: 15px;
   color: var(--grey-200);
   transition: filter 0.2s linear;

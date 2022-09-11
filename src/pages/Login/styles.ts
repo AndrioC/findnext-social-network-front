@@ -77,6 +77,10 @@ export const WrapperLoginTitle = styled.div`
 `;
 
 export const WrapperInputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 110px;
   width: 413px;
 
   /* Mobile */

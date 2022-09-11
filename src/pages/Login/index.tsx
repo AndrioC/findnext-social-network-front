@@ -1,4 +1,4 @@
-import { Space, Typography } from "antd";
+import { Typography } from "antd";
 import React from "react";
 import ButtonStyled from "../../components/ButtonStyled";
 import Header from "../../components/Header";
@@ -19,13 +19,8 @@ const Login: React.FC = () => {
             </Typography.Text>
           </S.WrapperLoginTitle>
           <S.WrapperInputs>
-            <Space
-              size={27}
-              style={{ display: "flex", flexDirection: "column" }}
-            >
-              <InputRoundText placeholderText="E-mail" />
-              <InputRoundPassword placeholderText="Password" />
-            </Space>
+            <InputRoundText placeholderText="E-mail" />
+            <InputRoundPassword placeholderText="Password" />
           </S.WrapperInputs>
           <S.WrapperSignInButton>
             <ButtonStyled text="Sign In" />

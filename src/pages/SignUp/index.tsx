@@ -1,4 +1,4 @@
-import { Space, Typography } from "antd";
+import { Typography } from "antd";
 import React from "react";
 import ButtonStyled from "../../components/ButtonStyled";
 import InputRoundPassword from "../../components/InputRoundPassword";
@@ -21,15 +21,10 @@ const SignUp: React.FC = () => {
             </Typography.Text>
           </S.WrapperSignUpTitle>
           <S.WrapperInputs>
-            <Space
-              size={6}
-              style={{ display: "flex", flexDirection: "column" }}
-            >
-              <InputRoundText placeholderText="Name" />
-              <InputRoundText placeholderText="E-mail" />
-              <InputRoundPassword placeholderText="Password" />
-              <InputRoundPassword placeholderText="Confirm password" />
-            </Space>
+            <InputRoundText placeholderText="Name" />
+            <InputRoundText placeholderText="E-mail" />
+            <InputRoundPassword placeholderText="Password" />
+            <InputRoundPassword placeholderText="Confirm password" />
           </S.WrapperInputs>
           <S.WrapperSignInButton>
             <ButtonStyled text="Sign In" />
