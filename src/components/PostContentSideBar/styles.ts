@@ -8,7 +8,7 @@ export const Container = styled.aside`
   height: 540px;
   background: var(--white);
   border-radius: 9px;
-  position: relative;
+  position: fixed;
 `;
 
 export const BackgroundImage = styled.div`

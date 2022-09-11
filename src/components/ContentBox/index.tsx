@@ -1,8 +1,13 @@
 import React from "react";
 import * as S from "./styles";
 
-const ContentBox: React.FC = () => {
-  return <S.ContentBox placeholder="Share your thoughts about some place.." />;
+interface Props {
+  text: string;
+  height: number;
+}
+
+const ContentBox: React.FC<Props> = ({ text, height }) => {
+  return <S.ContentBox placeholder={text} height={height} />;
 };
 
 export default ContentBox;

@@ -36,7 +36,10 @@ const PostContentSideBar: React.FC = () => {
         </S.BioInfo>
       </S.ProfileInfo>
       <S.ContentBox>
-        <ContentBox />
+        <ContentBox
+          text="Share your thoughts about some place.."
+          height={120}
+        />
       </S.ContentBox>
       <Divider style={{ background: "blue" }} />
       <S.UploadImage>
