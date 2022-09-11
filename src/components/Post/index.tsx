@@ -28,6 +28,21 @@ const Post: React.FC = () => {
         <S.PlaceImage>
           <img src={placeImg} alt="some-park" />
         </S.PlaceImage>
+
+        <S.InteractionIcons>
+          <S.InteractionIconInfo>
+            <AiOutlineHeart size={18} />
+            <span>2,4k</span>
+          </S.InteractionIconInfo>
+          <S.InteractionIconInfo>
+            <BiCommentDetail size={18} />
+            <span>2,4k</span>
+          </S.InteractionIconInfo>
+          <S.InteractionIconInfo>
+            <BsBookmark size={18} />
+            <span>2,4k</span>
+          </S.InteractionIconInfo>
+        </S.InteractionIcons>
         <Divider />
         <S.Bottom>
           <S.CommentSection>
@@ -41,20 +56,6 @@ const Post: React.FC = () => {
               />
             </S.WrapperContentBox>
           </S.CommentSection>
-          <S.InteractionIcons>
-            <S.InteractionIconInfo>
-              <AiOutlineHeart size={18} />
-              <span>2,4k</span>
-            </S.InteractionIconInfo>
-            <S.InteractionIconInfo>
-              <BiCommentDetail size={18} />
-              <span>2,4k</span>
-            </S.InteractionIconInfo>
-            <S.InteractionIconInfo>
-              <BsBookmark size={18} />
-              <span>2,4k</span>
-            </S.InteractionIconInfo>
-          </S.InteractionIcons>
         </S.Bottom>
       </S.Content>
     </S.Container>

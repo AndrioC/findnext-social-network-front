@@ -1,5 +1,4 @@
 import React from "react";
-import { HiOutlineUserCircle } from "react-icons/hi";
 import { BiHomeAlt } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import * as S from "./styles";
@@ -21,17 +20,6 @@ const SideBar: React.FC<Props> = ({ isOpen, toggle }) => {
       </S.Icon>
       <S.SidebarWrapper>
         <S.SidebarMenu>
-          <S.SidebarLink
-            to="profile"
-            onClick={toggle}
-            smooth
-            duration={500}
-            spy
-            offset={-60}
-            active
-          >
-            <HiOutlineUserCircle size={36} /> Profile
-          </S.SidebarLink>
           <S.SidebarLink
             to="home"
             onClick={toggle}

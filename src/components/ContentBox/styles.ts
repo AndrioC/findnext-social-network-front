@@ -12,4 +12,9 @@ export const ContentBox = styled.textarea<ContentBoxProps>`
   font-size: 13px;
   resize: none;
   padding: 20px;
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
 `;

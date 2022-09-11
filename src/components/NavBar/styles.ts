@@ -55,6 +55,11 @@ export const WrapperNavigationItems = styled.nav`
   justify-content: space-between;
   width: 700px;
   padding: 27px 45px 27px 0;
+
+  /* Mobile */
+  @media screen and (max-width: 767px) {
+    align-items: initial;
+  }
 `;
 
 export const WrapperIcons = styled.div`
@@ -84,8 +89,9 @@ export const WrapperIcons = styled.div`
 export const WrapperSearchInput = styled.div`
   width: 400px;
   @media screen and (max-width: 767px) {
-    width: 240px;
-    margin-left: 30px;
+    width: 220px;
+    margin-top: 10px;
+    padding: 0 15px 0 0;
   }
 `;
 
