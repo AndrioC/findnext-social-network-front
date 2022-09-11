@@ -1,6 +1,7 @@
 import React from "react";
+import FriendSuggestion from "../../components/FriendSuggestion";
 import HeaderLogged from "../../components/HeaderLogged";
-import Post from "../../components/Post";
+// import Post from "../../components/Post";
 // import PostContentSideBar from "../../components/PostContentSideBar";
 import * as S from "./styles";
 
@@ -12,9 +13,10 @@ const Home: React.FC = () => {
         {/* <S.WrapperLeftSide>
           <PostContentSideBar />
         </S.WrapperLeftSide> */}
-        <S.WrapperPost>
+        {/* <S.WrapperPost>
           <Post />
-        </S.WrapperPost>
+        </S.WrapperPost> */}
+        <FriendSuggestion />
       </S.Content>
     </S.Container>
   );
