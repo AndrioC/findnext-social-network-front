@@ -70,7 +70,7 @@ export const WrapperIcons = styled.div`
     color: var(--grey-200);
     transition: filter 0.3s linear;
 
-    :hover {
+    &:hover {
       filter: brightness(40%);
     }
   }
