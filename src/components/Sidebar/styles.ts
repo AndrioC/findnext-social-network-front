@@ -63,7 +63,7 @@ export const SidebarLink = styled(LinkS)<SidebarLinkProps>`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 
   &:hover {
