@@ -1,4 +1,3 @@
-import { Divider } from "antd";
 import React from "react";
 import { BiMessageSquareEdit } from "react-icons/bi";
 import * as S from "./styles";
@@ -41,11 +40,10 @@ const PostContentSideBar: React.FC = () => {
           height={120}
         />
       </S.ContentBox>
-      <Divider style={{ background: "blue" }} />
       <S.UploadImage>
         <UploadButton />
       </S.UploadImage>
-
+      <S.Divider />
       <S.WrapperPostButton>
         <ButtonStyled text="Post" />
       </S.WrapperPostButton>

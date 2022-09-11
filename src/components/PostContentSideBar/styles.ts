@@ -86,8 +86,15 @@ export const ContentBox = styled.div`
 `;
 
 export const UploadImage = styled.div`
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+`;
+
+export const Divider = styled.div`
+  width: 100%;
+  background: var(--grey-100);
+  height: 1px;
+  margin-bottom: 12px;
 `;
 
 export const WrapperPostButton = styled.div`
