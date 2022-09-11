@@ -29,7 +29,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(--background);
+    background: var(--grey-150);
   }
 
   *, button, input {
@@ -40,6 +40,10 @@ export default createGlobalStyle`
 
   button {
       cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    width: 1px;
   }
 
 `;

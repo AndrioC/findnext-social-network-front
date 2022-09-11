@@ -11,6 +11,15 @@ export const Content = styled.div`
   justify-content: space-between;
 `;
 
-export const WrapperLeftSide = styled.aside``;
+export const WrapperLeftSide = styled.aside`
+  margin-top: 150px;
+  padding: 0 0 0 30px;
+`;
+export const WrapperRightSide = styled.aside`
+  margin-top: 150px;
+  padding: 0 0 30px 60px;
+`;
 
-export const WrapperPost = styled.div``;
+export const WrapperPost = styled.div`
+  margin-top: 200px;
+`;

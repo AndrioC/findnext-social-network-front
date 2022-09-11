@@ -5,7 +5,7 @@ import rightImage from "../../assets/background-images/undraw_connected_world_wu
 
 export const Container = styled.div`
   height: 100vh;
-  background: url(${leftImage}), url(${rightImage});
+  background: url(${leftImage}), url(${rightImage}) var(--background);
   background-repeat: no-repeat;
   background-size: 392px 356px, 600px 456px;
   background-position: top 115px left 25px, top 213px right 20px;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   /* Tablet */
   @media (max-width: 993px) and (min-width: 768px) {
     background-color: red;
-    background: url(${leftImage}), url(${rightImage});
+    background: url(${leftImage}), url(${rightImage}) var(--background);
     background-repeat: no-repeat;
     background-size: 292px 356px, 692px 456px;
     background-position: top 115px left -75px, top 213px right -110px;
@@ -22,7 +22,7 @@ export const Container = styled.div`
   /* Mobile */
   @media (max-width: 767px) {
     height: 100vh;
-    background: url(${rightImage});
+    background: url(${rightImage}) var(--background);
     background-repeat: no-repeat;
     background-size: 292px 356px;
     background-position: top 545px left 50%;

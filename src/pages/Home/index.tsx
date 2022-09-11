@@ -1,8 +1,8 @@
 import React from "react";
 import FriendSuggestion from "../../components/FriendSuggestion";
 import HeaderLogged from "../../components/HeaderLogged";
-// import Post from "../../components/Post";
-// import PostContentSideBar from "../../components/PostContentSideBar";
+import Post from "../../components/Post";
+import PostContentSideBar from "../../components/PostContentSideBar";
 import * as S from "./styles";
 
 const Home: React.FC = () => {
@@ -10,13 +10,16 @@ const Home: React.FC = () => {
     <S.Container>
       <HeaderLogged />
       <S.Content>
-        {/* <S.WrapperLeftSide>
+        <S.WrapperLeftSide>
           <PostContentSideBar />
-        </S.WrapperLeftSide> */}
-        {/* <S.WrapperPost>
+        </S.WrapperLeftSide>
+        <S.WrapperPost>
           <Post />
-        </S.WrapperPost> */}
-        <FriendSuggestion />
+          <Post />
+        </S.WrapperPost>
+        <S.WrapperRightSide>
+          <FriendSuggestion />
+        </S.WrapperRightSide>
       </S.Content>
     </S.Container>
   );

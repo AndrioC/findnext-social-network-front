@@ -7,7 +7,7 @@ import rightCenterImage from "../../assets/background-images/undraw_world_re_768
 export const Container = styled.div`
   height: 100vh;
   background: url(${leftImage}), url(${leftBottomImage}),
-    url(${rightCenterImage});
+    url(${rightCenterImage}) var(--background);
   background-repeat: no-repeat;
   background-size: 392px 356px, 300px 356px, 892px 456px;
   background-position: top 115px left -75px, top 484px left -15px,
@@ -15,9 +15,8 @@ export const Container = styled.div`
 
   /* Tablet */
   @media (max-width: 993px) and (min-width: 768px) {
-    background-color: red;
     background: url(${leftImage}), url(${leftBottomImage}),
-      url(${rightCenterImage});
+      url(${rightCenterImage}) var(--background);
     background-repeat: no-repeat;
     background-size: 292px 356px, 200px 356px, 692px 456px;
     background-position: top 115px left -75px, top 484px left -15px,
@@ -26,7 +25,7 @@ export const Container = styled.div`
 
   /* Mobile */
   @media (max-width: 767px) {
-    background: url(${rightCenterImage});
+    background: url(${rightCenterImage}) var(--background);
     background-repeat: no-repeat;
     background-size: 292px 356px;
     background-position: top 545px left 50%;

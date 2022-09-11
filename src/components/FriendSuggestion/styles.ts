@@ -6,14 +6,12 @@ export const Container = styled.div`
   background: var(--white);
   height: 342px;
   overflow: scroll;
+  position: fixed;
+  right: 15px;
 
   h3 {
     margin-top: 15px;
     margin-left: 15px;
-  }
-
-  ::-webkit-scrollbar {
-    width: 1px;
   }
 `;
 

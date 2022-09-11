@@ -21,6 +21,48 @@ const FriendSuggestion: React.FC = () => {
           <ButtonStyled text="Follow" />
         </S.WrapperFollowButton>
       </S.Content>
+      <S.Content>
+        <S.UserInfo>
+          <S.UserImage>
+            <img src={userImg} alt="user-profile" />
+          </S.UserImage>
+          <S.UserNameAndLocation>
+            <span>Andrio</span>
+            <p>Sobral, Brazil</p>
+          </S.UserNameAndLocation>
+        </S.UserInfo>
+        <S.WrapperFollowButton>
+          <ButtonStyled text="Follow" />
+        </S.WrapperFollowButton>
+      </S.Content>
+      <S.Content>
+        <S.UserInfo>
+          <S.UserImage>
+            <img src={userImg} alt="user-profile" />
+          </S.UserImage>
+          <S.UserNameAndLocation>
+            <span>Andrio</span>
+            <p>Sobral, Brazil</p>
+          </S.UserNameAndLocation>
+        </S.UserInfo>
+        <S.WrapperFollowButton>
+          <ButtonStyled text="Follow" />
+        </S.WrapperFollowButton>
+      </S.Content>
+      <S.Content>
+        <S.UserInfo>
+          <S.UserImage>
+            <img src={userImg} alt="user-profile" />
+          </S.UserImage>
+          <S.UserNameAndLocation>
+            <span>Andrio</span>
+            <p>Sobral, Brazil</p>
+          </S.UserNameAndLocation>
+        </S.UserInfo>
+        <S.WrapperFollowButton>
+          <ButtonStyled text="Follow" />
+        </S.WrapperFollowButton>
+      </S.Content>
     </S.Container>
   );
 };
