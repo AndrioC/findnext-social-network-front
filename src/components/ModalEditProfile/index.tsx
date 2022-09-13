@@ -14,7 +14,7 @@ interface Props {
 const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
   return (
     <Modal
-      visible={isVisible}
+      open={isVisible}
       width="900px"
       onOk={() => setIsVisible(!isVisible)}
       onCancel={() => setIsVisible(!isVisible)}

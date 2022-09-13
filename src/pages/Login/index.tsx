@@ -1,7 +1,7 @@
 import { useMutation } from "@apollo/client";
 import { Typography, Form, Spin } from "antd";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ButtonStyled from "../../components/ButtonStyled";
 import Header from "../../components/Header";
 import InputRoundPassword from "../../components/InputRoundPassword";
@@ -56,8 +56,7 @@ const Login: React.FC = () => {
           </Form>
           <S.WrapperSignUp>
             <Typography.Text>
-              Don&apos;t have an account?{" "}
-              <a href="www.google.com">Create now</a>{" "}
+              Don&apos;t have an account? <Link to="/sign-up">Create now</Link>
             </Typography.Text>
           </S.WrapperSignUp>
         </S.WrapperLogin>
