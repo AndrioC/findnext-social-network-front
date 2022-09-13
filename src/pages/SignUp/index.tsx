@@ -1,4 +1,4 @@
-import { Typography, Form, Spin } from "antd";
+import { Typography, Form, Spin, notification } from "antd";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
@@ -24,6 +24,18 @@ const SignUp: React.FC = () => {
 
     await signup({
       variables: { input: dataValues },
+      onError(err) {
+        const error = { err };
+        notification.error({
+          message: "Error when registering ",
+          description: error.err.message,
+        });
+      },
+      onCompleted() {
+        notification.success({
+          message: "User registered successfully",
+        });
+      },
     });
 
     navigate("/login");

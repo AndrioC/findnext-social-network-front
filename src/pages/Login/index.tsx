@@ -1,5 +1,5 @@
 import { useMutation } from "@apollo/client";
-import { Typography, Form, Spin } from "antd";
+import { Typography, Form, Spin, notification } from "antd";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ButtonStyled from "../../components/ButtonStyled";
@@ -25,6 +25,18 @@ const Login: React.FC = () => {
 
     const signinUser = await signin({
       variables: { input: dataValues },
+      onError(err) {
+        const error = { err };
+        notification.error({
+          message: "Error when loggin in",
+          description: error.err.message,
+        });
+      },
+      onCompleted() {
+        notification.success({
+          message: "Login successfully",
+        });
+      },
     });
 
     login(signinUser.data.signin);
