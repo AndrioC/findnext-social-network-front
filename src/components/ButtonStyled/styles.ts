@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Button } from "antd";
 
-export const ButtonStyled = styled(Button)`
+export const ButtonStyled = styled.button`
   background: var(--peach-100);
   border-radius: 10px;
   border: none;

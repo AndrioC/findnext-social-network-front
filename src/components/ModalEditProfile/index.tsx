@@ -27,10 +27,13 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
         </S.ContentImages>
         <S.ContentForm>
           <UploadProfileImage />
-          <InputRoundText placeholderText="Name" />
-          <InputRoundText placeholderText="Bio" />
-          <InputRoundText placeholderText="Password" />
-          <InputRoundText placeholderText="Confirm password" />
+          <InputRoundText placeholderText="Name" name="name" />
+          <InputRoundText placeholderText="Bio" name="bio" />
+          <InputRoundText placeholderText="Password" name="password" />
+          <InputRoundText
+            placeholderText="Confirm password"
+            name="confirm-password"
+          />
           <ButtonStyled text="Save" />
         </S.ContentForm>
       </S.Container>

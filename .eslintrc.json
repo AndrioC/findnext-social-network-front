@@ -30,6 +30,10 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "off"
   }
 }

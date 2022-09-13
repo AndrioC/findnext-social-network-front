@@ -1,12 +1,16 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import * as S from "./styles";
 
-interface Props {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   text: string;
-}
+};
 
-const ButtonStyled: React.FC<Props> = ({ text }) => {
-  return <S.ButtonStyled>{text}</S.ButtonStyled>;
+const ButtonStyled: React.FC<ButtonProps> = ({ text, ...rest }) => {
+  return (
+    <S.ButtonStyled type="button" {...rest}>
+      {text}
+    </S.ButtonStyled>
+  );
 };
 
 export default ButtonStyled;

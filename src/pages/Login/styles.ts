@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import { Input } from "antd";
 import leftImage from "../../assets/background-images/undraw_trip_re_f724.svg";
 import leftBottomImage from "../../assets/background-images/undraw_camping_noc8.svg";
 import rightCenterImage from "../../assets/background-images/undraw_world_re_768g.svg";
@@ -109,5 +110,25 @@ export const WrapperSignUp = styled.div`
       text-decoration: none;
       color: var(--black);
     }
+  }
+`;
+
+export const InputStyled = styled(Input.Password)`
+  border: 2px solid var(--grey-100);
+  border-radius: 10px;
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: var(--grey-200);
+
+  input {
+    ::placeholder {
+      color: var(--grey-200);
+    }
+    font-size: 18px;
+    width: 100%;
   }
 `;

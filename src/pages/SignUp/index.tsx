@@ -21,10 +21,13 @@ const SignUp: React.FC = () => {
             </Typography.Text>
           </S.WrapperSignUpTitle>
           <S.WrapperInputs>
-            <InputRoundText placeholderText="Name" />
-            <InputRoundText placeholderText="E-mail" />
-            <InputRoundPassword placeholderText="Password" />
-            <InputRoundPassword placeholderText="Confirm password" />
+            <InputRoundText placeholderText="Name" name="name" />
+            <InputRoundText placeholderText="E-mail" name="email" />
+            <InputRoundPassword placeholderText="Password" name="password" />
+            <InputRoundPassword
+              placeholderText="Confirm password"
+              name="confirm-password"
+            />
           </S.WrapperInputs>
           <S.WrapperSignInButton>
             <ButtonStyled text="Sign In" />
