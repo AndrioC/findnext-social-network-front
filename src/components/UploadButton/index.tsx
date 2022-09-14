@@ -1,16 +1,39 @@
-import { Upload } from "antd";
+import { Upload, Form, UploadProps } from "antd";
+import ImgCrop from "antd-img-crop";
 import React from "react";
 import { CgImage } from "react-icons/cg";
+import { beforeUpload, fakeRequest } from "../../utils";
 import * as S from "./styles";
 
-const UploadButton: React.FC = () => {
+interface Props {
+  setFile(values: any): void;
+}
+
+const UploadButton: React.FC<Props> = ({ setFile }) => {
+  const config: UploadProps = {
+    name: "file",
+    maxCount: 1,
+    customRequest: (info) => fakeRequest(info.onSuccess),
+    onChange(info) {
+      setFile(info.fileList);
+    },
+  };
+
   return (
-    <Upload>
-      <S.ButtonStyled>
-        <CgImage size={18} />
-        Image
-      </S.ButtonStyled>
-    </Upload>
+    <Form.Item name="post-image">
+      <ImgCrop rotate beforeCrop={beforeUpload}>
+        <Upload
+          accept=".png,.jpg,.jpeg"
+          customRequest={fakeRequest}
+          {...config}
+        >
+          <S.ButtonStyled>
+            <CgImage size={18} />
+            Image
+          </S.ButtonStyled>
+        </Upload>
+      </ImgCrop>
+    </Form.Item>
   );
 };
 

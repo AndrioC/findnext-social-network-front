@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import { Input } from "antd";
 
-export const InputStyled = styled(Input)`
+interface InputStyledProps {
+  height: number;
+}
+
+export const InputStyled = styled.input<InputStyledProps>`
   border: 2px solid var(--grey-100);
   border-radius: 10px;
   width: 100%;
-  height: 52px;
+  height: ${(props) => props.height}px;
   padding: 15px;
   font-size: 18px;
 

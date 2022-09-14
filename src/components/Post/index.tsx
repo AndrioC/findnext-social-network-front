@@ -52,6 +52,7 @@ const Post: React.FC = () => {
             <S.WrapperContentBox>
               <ContentBox
                 text="Share your thoughts about this place"
+                name="description"
                 height={60}
               />
             </S.WrapperContentBox>

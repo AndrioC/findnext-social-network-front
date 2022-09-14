@@ -5,7 +5,8 @@ export const Container = styled.aside`
   align-items: center;
   flex-direction: column;
   width: 340px;
-  height: 570px;
+  height: 610px;
+  background: red;
   background: var(--white);
   border-radius: 9px;
   position: fixed;
@@ -71,19 +72,17 @@ export const BioInfo = styled.div`
 
 export const ContentBox = styled.div`
   display: flex;
-  width: 320px;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-`;
-
-export const UploadImage = styled.div`
-  margin-top: 6px;
+  margin-top: 90px;
 `;
 
 export const WrapperPostButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 320px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 `;
