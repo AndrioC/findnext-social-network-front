@@ -22,11 +22,7 @@ const UploadButton: React.FC<Props> = ({ setFile }) => {
   return (
     <Form.Item name="post-image">
       <ImgCrop rotate beforeCrop={beforeUpload}>
-        <Upload
-          accept=".png,.jpg,.jpeg"
-          customRequest={fakeRequest}
-          {...config}
-        >
+        <Upload accept=".png,.jpg,.jpeg" {...config}>
           <S.ButtonStyled>
             <CgImage size={18} />
             Image

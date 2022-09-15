@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Button } from "antd";
 
-export const ButtonStyled = styled(Button)`
+export const ButtonStyled = styled.img`
   background: var(--grey-100);
   display: flex;
   align-items: center;
@@ -12,6 +11,7 @@ export const ButtonStyled = styled(Button)`
   font-size: 15px;
   color: var(--grey-200);
   transition: filter 0.2s linear;
+  cursor: pointer;
 
   &:hover {
     background: var(--grey-100);

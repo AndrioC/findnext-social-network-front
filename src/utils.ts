@@ -1,4 +1,5 @@
 import { message } from "antd";
+import { RcFile } from "antd/lib/upload";
 
 export const fakeRequest = async (onSuccess: any): Promise<void> => {
   setTimeout(() => {
@@ -19,3 +20,9 @@ export function beforeUpload(file: File): boolean {
   }
   return checkFormat && checkSize;
 }
+
+export const getBase64 = (img: RcFile, callback: (url: string) => void) => {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => callback(reader.result as string));
+  reader.readAsDataURL(img);
+};

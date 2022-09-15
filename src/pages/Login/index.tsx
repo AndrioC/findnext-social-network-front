@@ -36,12 +36,12 @@ const Login: React.FC = () => {
         notification.success({
           message: "Login successfully",
         });
+
+        navigate("/home");
       },
     });
 
     login(signinUser.data.signin);
-
-    navigate("/home");
   };
 
   return (

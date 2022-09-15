@@ -35,10 +35,10 @@ const SignUp: React.FC = () => {
         notification.success({
           message: "User registered successfully",
         });
+
+        navigate("/login");
       },
     });
-
-    navigate("/login");
   };
   return (
     <Spin spinning={loading}>

@@ -2,22 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-between;
 `;
 
-export const ContentImages = styled.div`
+export const WrapperImage = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 420px;
+  margin-bottom: 9px;
 `;
 
 export const ContentForm = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 400px;
-  justify-content: space-between;
-  height: 460px;
 `;
