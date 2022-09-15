@@ -23,7 +23,9 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
   const [backgroundImage, setBackgroundImage] = useState<any>();
 
   const [updateUser, { loading }] = useMutation(GQL_UPDATE_USER);
-  const { data } = useQuery(GQL_LOAD_USER_DATA);
+  const { data } = useQuery(GQL_LOAD_USER_DATA, {
+    variables: { id: user.id },
+  });
 
   const handleSubmit = async (values: any) => {
     const dataValues = {

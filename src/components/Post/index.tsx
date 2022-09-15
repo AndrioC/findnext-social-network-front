@@ -9,7 +9,13 @@ import userImg from "../../assets/profile.png";
 import placeImg from "../../assets/background-images/arches-national-park-g478e1ec61_1920.jpg";
 import ContentBox from "../ContentBox";
 
-const Post: React.FC = () => {
+interface Props {
+  location: string;
+  owner_name: string;
+  description: string;
+}
+
+const Post: React.FC<Props> = ({ location, owner_name, description }) => {
   return (
     <S.Container>
       <S.Content>
@@ -18,12 +24,12 @@ const Post: React.FC = () => {
             <img src={userImg} alt="user-profile" />
           </S.UserImage>
           <S.UserNameAndLocation>
-            <span>Andrio</span>
-            <p>Sobral, Brazil</p>
+            <span>{owner_name}</span>
+            <p>{location}</p>
           </S.UserNameAndLocation>
         </S.ProfileInfo>
         <S.Description>
-          <p>It&apos;s a great city to visit, it&apos;s hot but is worth it</p>
+          <p>{description}</p>
         </S.Description>
         <S.PlaceImage>
           <img src={placeImg} alt="some-park" />

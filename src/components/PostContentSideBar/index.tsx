@@ -11,16 +11,23 @@ import EditProfileButton from "../EditProfileButton";
 import InputRoundText from "../InputRoundText";
 import { GQL_CREATE_POST } from "../../graphql/mutations/create-post";
 import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
+import { GQL_PLACES } from "../../graphql/queries/load-places";
+import { useAuth } from "../../hooks/auth";
 
 const PostContentSideBar: React.FC = () => {
   const [form] = Form.useForm();
   const [file, setFile] = useState<any>();
 
+  const { user } = useAuth();
+
   const [createPlace, { loading }] = useMutation(GQL_CREATE_POST);
-  const { data } = useQuery(GQL_LOAD_USER_DATA);
+  const { data } = useQuery(GQL_LOAD_USER_DATA, {
+    variables: { id: user.id },
+  });
 
   const handleSubmit = async (values: any) => {
     const dataValues = {
+      userId: user.id,
       description: values.description,
       location: values.location,
       image: file[0].originFileObj,
@@ -41,6 +48,11 @@ const PostContentSideBar: React.FC = () => {
         });
         form.resetFields();
       },
+      refetchQueries: [
+        {
+          query: GQL_PLACES,
+        },
+      ],
     });
   };
 

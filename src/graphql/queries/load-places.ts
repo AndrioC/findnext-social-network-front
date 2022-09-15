@@ -7,7 +7,6 @@ export const GQL_PLACES = gql`
       location
       image
       userName {
-        id
         name
       }
     }
