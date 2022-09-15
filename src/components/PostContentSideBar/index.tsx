@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Divider, Form, notification, Spin } from "antd";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import * as S from "./styles";
 
 import userImg from "../../assets/profile.png";
@@ -10,12 +10,14 @@ import UploadButton from "../UploadButton";
 import EditProfileButton from "../EditProfileButton";
 import InputRoundText from "../InputRoundText";
 import { GQL_CREATE_POST } from "../../graphql/mutations/create-post";
+import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
 
 const PostContentSideBar: React.FC = () => {
   const [form] = Form.useForm();
   const [file, setFile] = useState<any>();
 
   const [createPlace, { loading }] = useMutation(GQL_CREATE_POST);
+  const { data } = useQuery(GQL_LOAD_USER_DATA);
 
   const handleSubmit = async (values: any) => {
     const dataValues = {
@@ -66,7 +68,7 @@ const PostContentSideBar: React.FC = () => {
             </S.FollowersInfo>
           </S.ProfileImageFollowersInfo>
           <S.BioInfo>
-            <span>Andrio | Software Engineer</span>
+            <span>{data?.listUserData.name}</span>
           </S.BioInfo>
         </S.ProfileInfo>
         <Form form={form} onFinish={handleSubmit}>

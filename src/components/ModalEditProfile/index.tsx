@@ -1,4 +1,4 @@
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import { Form, notification, Spin } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
@@ -9,6 +9,7 @@ import UploadBackgroundImage from "../UploadBackgroundImage";
 import UploadProfileImage from "../UploadProfileImage";
 import { useAuth } from "../../hooks/auth";
 import * as S from "./styles";
+import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
 
 interface Props {
   isVisible: boolean;
@@ -22,6 +23,7 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
   const [backgroundImage, setBackgroundImage] = useState<any>();
 
   const [updateUser, { loading }] = useMutation(GQL_UPDATE_USER);
+  const { data } = useQuery(GQL_LOAD_USER_DATA);
 
   const handleSubmit = async (values: any) => {
     const dataValues = {
@@ -63,13 +65,16 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
       >
         <S.Container>
           <UploadBackgroundImage setBackgroundImage={setBackgroundImage} />
-          <Form form={form} onFinish={handleSubmit}>
+          <Form
+            form={form}
+            onFinish={handleSubmit}
+            initialValues={data?.listUserData}
+          >
             <S.ContentForm>
               <S.WrapperImage>
                 <UploadProfileImage setProfileImage={setProfileImage} />
               </S.WrapperImage>
               <InputRoundText placeholderText="Name" name="name" />
-              <InputRoundText placeholderText="Bio" name="bio" />
               <InputRoundText placeholderText="Password" name="password" />
               <InputRoundText
                 placeholderText="Confirm password"

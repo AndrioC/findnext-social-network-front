@@ -8,6 +8,7 @@ import * as S from "./styles";
 import logoImg from "../../assets/logo.svg";
 import userImg from "../../assets/profile.png";
 import SearchInput from "../SearchInput";
+import { useAuth } from "../../hooks/auth";
 
 interface Props {
   isOpen: boolean;
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
+  const { user } = useAuth();
   return (
     <S.Container className="desktop-menu">
       <S.Content>
@@ -34,7 +36,7 @@ const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
           </S.MobileIcon>
           <S.WrapperUserMenu>
             <img src={userImg} alt="user-profile" />
-            <strong>Andrio C.</strong>
+            <strong>{user.name}</strong>
             <AiOutlineDown />
           </S.WrapperUserMenu>
         </S.WrapperNavigationItems>
