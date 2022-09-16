@@ -5,6 +5,8 @@ export const GQL_LOAD_USER_DATA = gql`
     listUserData(id: $id) {
       name
       email
+      url_avatar_image
+      url_background_image
     }
   }
 `;

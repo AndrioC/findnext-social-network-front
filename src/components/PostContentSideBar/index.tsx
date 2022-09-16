@@ -3,7 +3,6 @@ import { Divider, Form, notification, Spin } from "antd";
 import { useMutation, useQuery } from "@apollo/client";
 import * as S from "./styles";
 
-import userImg from "../../assets/profile.png";
 import ContentBox from "../ContentBox";
 import ButtonStyled from "../ButtonStyled";
 import UploadButton from "../UploadButton";
@@ -59,11 +58,12 @@ const PostContentSideBar: React.FC = () => {
   return (
     <Spin spinning={loading}>
       <S.Container>
-        <S.BackgroundImage>
+        <S.WrapperBackgroundImage>
+          <S.BackgroundImage src={data?.listUserData.url_background_image} />
           <S.EditProfileButton>
             <EditProfileButton />
           </S.EditProfileButton>
-        </S.BackgroundImage>
+        </S.WrapperBackgroundImage>
         <S.ProfileInfo>
           <S.ProfileImageFollowersInfo>
             <S.FollowersInfo>
@@ -71,7 +71,10 @@ const PostContentSideBar: React.FC = () => {
               <p>Followers</p>
             </S.FollowersInfo>
             <S.UserImage>
-              <img src={userImg} alt="user-profile" />
+              <img
+                src={data?.listUserData.url_avatar_image}
+                alt="user-profile"
+              />
             </S.UserImage>
 
             <S.FollowersInfo>

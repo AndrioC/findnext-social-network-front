@@ -6,6 +6,7 @@ export const GQL_PLACES = gql`
       description
       location
       image
+      url_image
       userName {
         name
       }

@@ -6,16 +6,21 @@ import { Divider } from "antd";
 import * as S from "./styles";
 
 import userImg from "../../assets/profile.png";
-import placeImg from "../../assets/background-images/arches-national-park-g478e1ec61_1920.jpg";
 import ContentBox from "../ContentBox";
 
 interface Props {
   location: string;
   owner_name: string;
   description: string;
+  url_image: string;
 }
 
-const Post: React.FC<Props> = ({ location, owner_name, description }) => {
+const Post: React.FC<Props> = ({
+  location,
+  owner_name,
+  description,
+  url_image,
+}) => {
   return (
     <S.Container>
       <S.Content>
@@ -32,7 +37,7 @@ const Post: React.FC<Props> = ({ location, owner_name, description }) => {
           <p>{description}</p>
         </S.Description>
         <S.PlaceImage>
-          <img src={placeImg} alt="some-park" />
+          <img src={url_image} alt="some-park" />
         </S.PlaceImage>
 
         <S.InteractionIcons>

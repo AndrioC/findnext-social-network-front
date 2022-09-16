@@ -12,7 +12,11 @@ export const Container = styled.aside`
   position: fixed;
 `;
 
-export const BackgroundImage = styled.div`
+export const WrapperBackgroundImage = styled.div`
+  width: 100%;
+`;
+
+export const BackgroundImage = styled.img`
   width: 100%;
   height: 180px;
   background: var(--grey-200);

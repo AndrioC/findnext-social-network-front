@@ -8,9 +8,13 @@ import placeHolder from "../../assets/placeholder.png";
 
 interface Props {
   setBackgroundImage(values: any): void;
+  image: string;
 }
 
-const UploadBackgroundImage: React.FC<Props> = ({ setBackgroundImage }) => {
+const UploadBackgroundImage: React.FC<Props> = ({
+  setBackgroundImage,
+  image,
+}) => {
   const [imageUrl, setImageUrl] = useState<string>();
 
   const config: UploadProps = {
@@ -33,7 +37,7 @@ const UploadBackgroundImage: React.FC<Props> = ({ setBackgroundImage }) => {
         <Upload accept=".png,.jpg,.jpeg" {...config}>
           <S.ButtonStyled
             id="img"
-            src={imageUrl ?? placeHolder}
+            src={image || placeHolder || imageUrl}
             alt="user-background"
           />
         </Upload>

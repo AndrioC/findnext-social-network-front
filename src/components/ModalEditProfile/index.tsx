@@ -52,6 +52,11 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
           message: "Info updated successfully",
         });
       },
+      refetchQueries: [
+        {
+          query: GQL_LOAD_USER_DATA,
+        },
+      ],
     });
   };
 
@@ -66,7 +71,10 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
         title={<h2 style={{ color: "var(--grey-200)" }}>My profile</h2>}
       >
         <S.Container>
-          <UploadBackgroundImage setBackgroundImage={setBackgroundImage} />
+          <UploadBackgroundImage
+            setBackgroundImage={setBackgroundImage}
+            image={data?.listUserData.url_background_image}
+          />
           <Form
             form={form}
             onFinish={handleSubmit}
@@ -74,7 +82,10 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
           >
             <S.ContentForm>
               <S.WrapperImage>
-                <UploadProfileImage setProfileImage={setProfileImage} />
+                <UploadProfileImage
+                  setProfileImage={setProfileImage}
+                  image={data?.listUserData.url_avatar_image}
+                />
               </S.WrapperImage>
               <InputRoundText placeholderText="Name" name="name" />
               <InputRoundText placeholderText="Password" name="password" />
