@@ -5,8 +5,8 @@ export const GQL_UPDATE_USER = gql`
     updateUser(id: $id, data: $data) {
       name
       email
-      avatar_image
-      background_image
+      url_avatar_image
+      url_background_image
     }
   }
 `;

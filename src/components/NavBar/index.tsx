@@ -9,7 +9,6 @@ import { useQuery } from "@apollo/client";
 import * as S from "./styles";
 
 import logoImg from "../../assets/logo.svg";
-import userImg from "../../assets/profile.png";
 import SearchInput from "../SearchInput";
 import { useAuth } from "../../hooks/auth";
 import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
@@ -57,10 +56,10 @@ const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
           <Popover content={content} trigger="hover">
             <S.WrapperUserMenu>
               <img
-                src={data?.listUserData.url_avatar_image ?? userImg}
+                src={data?.listUserData.url_avatar_image}
                 alt="user-profile"
               />
-              <strong>{user.name}</strong>
+              <strong>{data?.listUserData.name}</strong>
             </S.WrapperUserMenu>
           </Popover>
         </S.WrapperNavigationItems>

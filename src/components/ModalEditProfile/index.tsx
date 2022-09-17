@@ -10,6 +10,7 @@ import UploadProfileImage from "../UploadProfileImage";
 import { useAuth } from "../../hooks/auth";
 import * as S from "./styles";
 import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
+import InputRoundPassword from "../InputRoundPassword";
 
 interface Props {
   isVisible: boolean;
@@ -55,6 +56,7 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
       refetchQueries: [
         {
           query: GQL_LOAD_USER_DATA,
+          variables: { id: user.id },
         },
       ],
     });
@@ -88,8 +90,8 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
                 />
               </S.WrapperImage>
               <InputRoundText placeholderText="Name" name="name" />
-              <InputRoundText placeholderText="Password" name="password" />
-              <InputRoundText
+              <InputRoundPassword placeholderText="Password" name="password" />
+              <InputRoundPassword
                 placeholderText="Confirm password"
                 name="confirm-password"
               />
