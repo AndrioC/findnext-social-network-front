@@ -72,6 +72,13 @@ export const PlaceImage = styled.div`
   }
 `;
 
+export const WrapperPostedDate = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 3px 0 0 24px;
+  font-size: 12px;
+`;
+
 export const InteractionIcons = styled.div`
   display: flex;
   width: 100%;

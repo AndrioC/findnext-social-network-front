@@ -14,6 +14,7 @@ interface Place {
   location: string;
   image: string;
   url_image: string;
+  created_at: Date;
   userName: {
     id: number;
     name: string;
@@ -41,6 +42,7 @@ const Home: React.FC = () => {
                 owner_name={place.userName.name}
                 url_image={place.url_image}
                 url_avatar_image={place.userName.url_avatar_image}
+                created_at={place.created_at}
               />
             ))}
           </S.WrapperPost>

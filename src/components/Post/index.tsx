@@ -14,6 +14,7 @@ interface Props {
   description: string;
   url_image: string;
   url_avatar_image: string;
+  created_at: Date;
 }
 
 const Post: React.FC<Props> = ({
@@ -22,7 +23,9 @@ const Post: React.FC<Props> = ({
   description,
   url_image,
   url_avatar_image,
+  created_at,
 }) => {
+  const createdAt = new Date(created_at).toLocaleDateString("pt-BR");
   return (
     <S.Container>
       <S.Content>
@@ -41,7 +44,9 @@ const Post: React.FC<Props> = ({
         <S.PlaceImage>
           <img src={url_image} alt="some-park" />
         </S.PlaceImage>
-
+        <S.WrapperPostedDate>
+          <span>Postado em: {createdAt}</span>
+        </S.WrapperPostedDate>
         <S.InteractionIcons>
           <S.InteractionIconInfo>
             <AiOutlineHeart size={18} />
@@ -56,7 +61,7 @@ const Post: React.FC<Props> = ({
             <span>2,4k</span>
           </S.InteractionIconInfo>
         </S.InteractionIcons>
-        <Divider />
+        <Divider style={{ margin: "10px 0 10px 0" }} />
         <S.Bottom>
           <S.CommentSection>
             <S.UserImage>

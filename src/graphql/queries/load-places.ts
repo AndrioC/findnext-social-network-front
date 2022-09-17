@@ -7,6 +7,7 @@ export const GQL_PLACES = gql`
       location
       image
       url_image
+      created_at
       userName {
         name
         url_avatar_image
