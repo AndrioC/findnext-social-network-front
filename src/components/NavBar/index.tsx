@@ -5,12 +5,14 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Button, Popover } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "@apollo/client";
 import * as S from "./styles";
 
 import logoImg from "../../assets/logo.svg";
 import userImg from "../../assets/profile.png";
 import SearchInput from "../SearchInput";
 import { useAuth } from "../../hooks/auth";
+import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
 
 interface Props {
   isOpen: boolean;
@@ -20,6 +22,10 @@ interface Props {
 const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  const { data } = useQuery(GQL_LOAD_USER_DATA, {
+    variables: { id: user.id },
+  });
 
   const handleLogout = () => {
     logout();
@@ -50,7 +56,10 @@ const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
           </S.MobileIcon>
           <Popover content={content} trigger="hover">
             <S.WrapperUserMenu>
-              <img src={userImg} alt="user-profile" />
+              <img
+                src={data?.listUserData.url_avatar_image ?? userImg}
+                alt="user-profile"
+              />
               <strong>{user.name}</strong>
             </S.WrapperUserMenu>
           </Popover>

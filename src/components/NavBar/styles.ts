@@ -98,13 +98,14 @@ export const WrapperSearchInput = styled.div`
 export const WrapperUserMenu = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 152px;
   cursor: pointer;
   img {
     cursor: pointer;
     width: 42px;
     height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
   }
 
   /* Mobile */
