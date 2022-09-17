@@ -60,7 +60,7 @@ export const WrapperLoginTitle = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 72px;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
 
   strong {
     font-size: 24px;
