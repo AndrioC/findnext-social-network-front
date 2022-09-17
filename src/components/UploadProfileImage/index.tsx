@@ -27,7 +27,7 @@ const UploadProfileImage: React.FC<Props> = ({ setProfileImage, image }) => {
           <S.ButtonStyled
             id="img"
             src={image ?? placeHolder}
-            alt="user-background"
+            alt="user-profile"
           />
         </Upload>
       </ImgCrop>

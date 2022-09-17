@@ -10,7 +10,12 @@ interface Props {
 
 const InputRoundText: React.FC<Props> = ({ placeholderText, name, height }) => {
   return (
-    <Form.Item name={name}>
+    <Form.Item
+      name={name}
+      rules={[
+        { required: true, message: `${name.toLocaleLowerCase()} is required` },
+      ]}
+    >
       <S.InputStyled placeholder={placeholderText} height={height!!} />
     </Form.Item>
   );

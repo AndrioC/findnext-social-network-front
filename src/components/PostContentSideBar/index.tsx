@@ -13,6 +13,9 @@ import { GQL_LOAD_USER_DATA } from "../../graphql/queries/load-user-data";
 import { GQL_PLACES } from "../../graphql/queries/load-places";
 import { useAuth } from "../../hooks/auth";
 
+import userImg from "../../assets/profile.png";
+import placeholder from "../../assets/placeholder.png";
+
 const PostContentSideBar: React.FC = () => {
   const [form] = Form.useForm();
   const [file, setFile] = useState<any>();
@@ -56,10 +59,12 @@ const PostContentSideBar: React.FC = () => {
   };
 
   return (
-    <Spin spinning={loading}>
+    <Spin spinning={loading} style={{ width: 100 }}>
       <S.Container>
         <S.WrapperBackgroundImage>
-          <S.BackgroundImage src={data?.listUserData.url_background_image} />
+          <S.BackgroundImage
+            src={data?.listUserData.url_background_image ?? placeholder}
+          />
           <S.EditProfileButton>
             <EditProfileButton />
           </S.EditProfileButton>
@@ -72,7 +77,7 @@ const PostContentSideBar: React.FC = () => {
             </S.FollowersInfo>
             <S.UserImage>
               <img
-                src={data?.listUserData.url_avatar_image}
+                src={data?.listUserData.url_avatar_image ?? userImg}
                 alt="user-profile"
               />
             </S.UserImage>

@@ -20,7 +20,10 @@ const UploadButton: React.FC<Props> = ({ setFile }) => {
   };
 
   return (
-    <Form.Item name="post-image">
+    <Form.Item
+      name="post-image"
+      rules={[{ required: true, message: "Image is required" }]}
+    >
       <ImgCrop rotate beforeCrop={beforeUpload}>
         <Upload accept=".png,.jpg,.jpeg" {...config}>
           <S.ButtonStyled>

@@ -2,7 +2,9 @@ import React from "react";
 import { BiHomeAlt } from "react-icons/bi";
 
 import { FaBars } from "react-icons/fa";
-import { AiOutlineHeart, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
+import { Button, Popover } from "antd";
+import { useNavigate } from "react-router-dom";
 import * as S from "./styles";
 
 import logoImg from "../../assets/logo.svg";
@@ -16,7 +18,19 @@ interface Props {
 }
 
 const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
+  const content = (
+    <Button type="primary" danger onClick={handleLogout}>
+      Logout
+    </Button>
+  );
   return (
     <S.Container className="desktop-menu">
       <S.Content>
@@ -34,11 +48,12 @@ const NavBar: React.FC<Props> = ({ isOpen, toggle }) => {
           <S.MobileIcon isOpen={isOpen} onClick={toggle}>
             <FaBars />
           </S.MobileIcon>
-          <S.WrapperUserMenu>
-            <img src={userImg} alt="user-profile" />
-            <strong>{user.name}</strong>
-            <AiOutlineDown />
-          </S.WrapperUserMenu>
+          <Popover content={content} trigger="hover">
+            <S.WrapperUserMenu>
+              <img src={userImg} alt="user-profile" />
+              <strong>{user.name}</strong>
+            </S.WrapperUserMenu>
+          </Popover>
         </S.WrapperNavigationItems>
       </S.Content>
     </S.Container>

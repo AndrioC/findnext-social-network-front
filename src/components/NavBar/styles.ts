@@ -100,7 +100,9 @@ export const WrapperUserMenu = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 152px;
+  cursor: pointer;
   img {
+    cursor: pointer;
     width: 42px;
     height: 42px;
   }

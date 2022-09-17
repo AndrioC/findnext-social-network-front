@@ -70,16 +70,16 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
         footer={null}
         title={<h2 style={{ color: "var(--grey-200)" }}>My profile</h2>}
       >
-        <S.Container>
-          <UploadBackgroundImage
-            setBackgroundImage={setBackgroundImage}
-            image={data?.listUserData.url_background_image}
-          />
-          <Form
-            form={form}
-            onFinish={handleSubmit}
-            initialValues={data?.listUserData}
-          >
+        <Form
+          form={form}
+          onFinish={handleSubmit}
+          initialValues={data?.listUserData}
+        >
+          <S.Container>
+            <UploadBackgroundImage
+              setBackgroundImage={setBackgroundImage}
+              image={data?.listUserData.url_background_image}
+            />
             <S.ContentForm>
               <S.WrapperImage>
                 <UploadProfileImage
@@ -95,8 +95,8 @@ const ModalEditProfile: React.FC<Props> = ({ isVisible, setIsVisible }) => {
               />
               <ButtonStyled text="Save" type="submit" />
             </S.ContentForm>
-          </Form>
-        </S.Container>
+          </S.Container>
+        </Form>
       </Modal>
     </Spin>
   );

@@ -20,26 +20,10 @@ const SideBar: React.FC<Props> = ({ isOpen, toggle }) => {
       </S.Icon>
       <S.SidebarWrapper>
         <S.SidebarMenu>
-          <S.SidebarLink
-            to="home"
-            onClick={toggle}
-            smooth
-            duration={500}
-            spy
-            offset={-60}
-            active
-          >
+          <S.SidebarLink to="home" onClick={toggle}>
             <BiHomeAlt size={36} /> Home
           </S.SidebarLink>
-          <S.SidebarLink
-            to="interactions"
-            onClick={toggle}
-            smooth
-            duration={500}
-            spy
-            offset={-60}
-            active
-          >
+          <S.SidebarLink to="interactions" onClick={toggle}>
             <AiOutlineHeart size={36} />
             Interactions
           </S.SidebarLink>
