@@ -13,6 +13,7 @@ interface Props {
   owner_name: string;
   description: string;
   url_image: string;
+  url_avatar_image: string;
 }
 
 const Post: React.FC<Props> = ({
@@ -20,13 +21,14 @@ const Post: React.FC<Props> = ({
   owner_name,
   description,
   url_image,
+  url_avatar_image,
 }) => {
   return (
     <S.Container>
       <S.Content>
         <S.ProfileInfo>
           <S.UserImage>
-            <img src={userImg} alt="user-profile" />
+            <img src={url_avatar_image} alt="user-profile" />
           </S.UserImage>
           <S.UserNameAndLocation>
             <span>{owner_name}</span>
