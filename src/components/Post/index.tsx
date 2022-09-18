@@ -45,7 +45,7 @@ const Post: React.FC<Props> = ({
           <img src={url_image} alt="some-park" />
         </S.PlaceImage>
         <S.WrapperPostedDate>
-          <span>Postado em: {createdAt}</span>
+          <span>Posted in: {createdAt}</span>
         </S.WrapperPostedDate>
         <S.InteractionIcons>
           <S.InteractionIconInfo>
