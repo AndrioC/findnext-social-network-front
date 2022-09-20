@@ -24,6 +24,7 @@ This project was built using the following techs:
 - React.
 - TypeScript.
 - Styled components.
+- Antd (UI library).
 - GraphQL (Apollo Client).
 - Netlify (Deploy frontend).
 
